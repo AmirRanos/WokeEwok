@@ -14,8 +14,7 @@ Napi::Value Watermark(const Napi::CallbackInfo &info) {
     Napi::Object obj = info[0].As<Napi::Object>();
     Napi::Buffer<char> data = obj.Get("data").As<Napi::Buffer<char>>();
     string water = obj.Get("water").As<Napi::String>().Utf8Value();
-    Magick::GravityType gravity =
-        Magick::GravityType(obj.Get("gravity").As<Napi::Number>().Int64Value());
+    int gravity = obj.Get("gravity").As<Napi::Number>().Int64Value();
     bool resize = obj.Has("resize")
                       ? obj.Get("resize").As<Napi::Boolean>().Value()
                       : false;
@@ -46,6 +45,8 @@ Napi::Value Watermark(const Napi::CallbackInfo &info) {
 
     if (resize && append) {
       watermark = watermark.thumbnail_image(width);
+    } else if (resize && yscale) {
+      watermark = watermark.thumbnail_image(width, VImage::option()->set("height", page_height * yscale)->set("size", VIPS_SIZE_FORCE));
     } else if (resize) {
       watermark = watermark.thumbnail_image(
           VIPS_MAX_COORD, VImage::option()->set("height", page_height));
