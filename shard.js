@@ -89,7 +89,7 @@ class Shard extends BaseClusterWorker {
     });
 
     this.ipc.register("playbroadcast", (message) => {
-      this.bot.editStatus("dnd", {
+      this.bot.editStatus("online", {
         name: `${message} | @${this.bot.user.username} help`,
       });
       broadcast = true;
@@ -97,7 +97,7 @@ class Shard extends BaseClusterWorker {
     });
 
     this.ipc.register("broadcastend", () => {
-      this.bot.editStatus("dnd", {
+      this.bot.editStatus("online", {
         name: `${random(messages)} | @${this.bot.user.username} help`,
       });
       broadcast = false;
@@ -115,7 +115,7 @@ class Shard extends BaseClusterWorker {
   // set activity (a.k.a. the gamer code)
   activityChanger() {
     if (!broadcast) {
-      this.bot.editStatus("dnd", {
+      this.bot.editStatus("online", {
         name: `${random(messages)} | @${this.bot.user.username} help`,
       });
     }
@@ -136,7 +136,7 @@ class Shard extends BaseClusterWorker {
 
   shutdown(done) {
     log("warn", "Shutting down...");
-    this.bot.editStatus("dnd", {
+    this.bot.editStatus("online", {
       name: "Restarting/shutting down..."
     });
     database.stop();
