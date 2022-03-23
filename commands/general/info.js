@@ -15,7 +15,7 @@ class InfoCommand extends Command {
       embeds: [{
         color: 16711680,
         author: {
-          name: "esmBot Info/Credits",
+          name: "WokeEwok Info/Credits",
           icon_url: this.client.user.avatarURL
         },
         description: `This instance is managed by **${owner.username}#${owner.discriminator}**.`,
@@ -25,27 +25,15 @@ class InfoCommand extends Command {
         },
         {
           name: "📝 Credits:",
-          value: "Bot by **[Essem](https://essem.space)** and **[various contributors](https://github.com/esmBot/esmBot/graphs/contributors)**\nIcon by **[MintBurrow](https://twitter.com/MintBurrow)**"
+          value: "WokeEwok is a fork of esmBot by **[Essem](https://essem.space)** and **[various contributors](https://github.com/esmBot/esmBot/graphs/contributors)**"
         },
         {
           name: "💬 Total Servers:",
           value: stats && stats.guilds ? stats.guilds : `${this.client.guilds.size} (for this cluster only)`
         },
         {
-          name: "✅ Official Server:",
-          value: "[Click here!](https://projectlounge.pw/support)"
-        },
-        {
           name: "💻 Source Code:",
-          value: "[Click here!](https://github.com/esmBot/esmBot)"
-        },
-        {
-          name: "🛡️ Privacy Policy:",
-          value: "[Click here!](https://projectlounge.pw/esmBot/privacy.html)"
-        },
-        {
-          name: "🐦 Twitter:",
-          value: "[Click here!](https://twitter.com/esmBot_)"
+          value: "[Click here!](https://github.com/amirranos/WokeEwok)"
         }
         ]
       }]

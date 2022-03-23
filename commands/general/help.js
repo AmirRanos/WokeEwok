@@ -4,7 +4,7 @@ import { random } from "../../utils/misc.js";
 import paginator from "../../utils/pagination/pagination.js";
 import * as help from "../../utils/help.js";
 import Command from "../../classes/command.js";
-const tips = ["You can change the bot's prefix using the prefix command.", "Image commands also work with images previously posted in that channel.", "You can use the tags commands to save things for later use.", "You can visit https://projectlounge.pw/esmBot/help.html for a web version of this command list.", "You can view a command's aliases by putting the command name after the help command (e.g. help image).", "Parameters wrapped in [] are required, while parameters wrapped in {} are optional.", "esmBot is hosted and paid for completely out-of-pocket by the main developer. If you want to support development, please consider donating! https://patreon.com/TheEssem", "You can run commands in DMs as well, just message the bot with your command - no prefix needed!"];
+const tips = ["Image commands also work with images previously posted in that channel.", "You can view a command's aliases by putting the command name after the help command (e.g. help image).", "Parameters wrapped in [] are required, while parameters wrapped in {} are optional.", "You can run commands in DMs as well, just message the bot with your command - no prefix needed!"];
 
 class HelpCommand extends Command {
   async run() {
@@ -16,7 +16,7 @@ class HelpCommand extends Command {
       const embed = {
         embeds: [{
           author: {
-            name: "esmBot Help",
+            name: "WokeEwok Help",
             icon_url: this.client.user.avatarURL
           },
           title: `${this.message.channel.guild ? prefix : ""}${command}`,
@@ -74,7 +74,7 @@ class HelpCommand extends Command {
         embeds.push({
           embeds: [{
             author: {
-              name: "esmBot Help",
+              name: "WokeEwok Help",
               icon_url: this.client.user.avatarURL
             },
             title: value.title,

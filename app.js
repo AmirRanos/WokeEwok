@@ -3,7 +3,7 @@ Although there's a (very) slim chance of it working, multiple aspects of the bot
 The bot will continue to run past this message, but keep in mind that it could break at any time. Continue running at your own risk; alternatively, stop the bot using Ctrl+C and install WSL.` + "\x1b[0m");
 if (process.versions.node.split(".")[0] < 15) {
   console.error(`You are currently running Node.js version ${process.version}.
-esmBot requires Node.js version 15 or above.
+WokeEwok requires Node.js version 15 or above.
 Please refer to step 3 of the setup guide.`);
   process.exit(1);
 }
@@ -46,7 +46,7 @@ if (isMaster) {
  #  BFBBBBBBBBBBBBF"      "RBBBW    F  
   V ' 4BBBBBBBBBBM            TBBL  F   
    F  BBBBBBBBBBF              JBB  L   
-   F  FBBBBBBBEB                BBL 4   
+   F  FBBBBBBBEB    WokeEwok    BBL 4   
    E  [BB4BBBBEBL               BBL 4   
    I   #BBBBBBBEB              4BBH  *w 
    A   4BBBBBBBBBEW,         ,BBBB  W  [
@@ -57,7 +57,7 @@ k  <BBBw BBBBEBBBBBBBBBBBBBBBBBQ4BM  #
       *+,   " F'"'*^~~~^"^\`  V+*^       
           \`"""                          
           
-esmBot ${esmBotVersion} (${(await exec("git rev-parse HEAD").then(output => output.stdout.substring(0, 7), () => "unknown commit"))}), powered by eris-fleet ${erisFleetVersion}
+WokeEwok ${esmBotVersion} (${(await exec("git rev-parse HEAD").then(output => output.stdout.substring(0, 7), () => "unknown commit"))}), powered by eris-fleet ${erisFleetVersion}
 `);
 }
 
@@ -68,7 +68,7 @@ const Admiral = new Fleet({
   startingStatus: {
     status: "idle",
     game: {
-      name: "Starting esmBot..."
+      name: "Starting WokeEwok..."
     }
   },
   whatToLog: {

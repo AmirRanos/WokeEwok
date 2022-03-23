@@ -5,7 +5,7 @@ class RestartCommand extends Command {
     const owners = process.env.OWNER.split(",");
     if (!owners.includes(this.message.author.id)) return "Only the bot owner can restart me!";
     await this.client.createMessage(this.message.channel.id, Object.assign({
-      content: "esmBot is restarting."
+      content: "WokeEwok is restarting."
     }, this.reference));
     this.ipc.restartAllClusters(true);
     //this.ipc.broadcast("restart");

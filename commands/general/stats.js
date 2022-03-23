@@ -18,7 +18,7 @@ class StatsCommand extends Command {
     return {
       embeds: [{
         "author": {
-          "name": "esmBot Statistics",
+          "name": "WokeEwok Statistics",
           "icon_url": this.client.user.avatarURL
         },
         "description": `This instance is managed by **${owner.username}#${owner.discriminator}**.`,

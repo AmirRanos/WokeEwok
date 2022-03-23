@@ -7,7 +7,7 @@ class ImageStatsCommand extends Command {
     const embed = {
       embeds: [{
         "author": {
-          "name": "esmBot Image Statistics",
+          "name": "WokeEwok Image Statistics",
           "icon_url": this.client.user.avatarURL
         },
         "color": 16711680,
